@@ -62,9 +62,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        if(downloadData()) {
-//            databaseCreate();
-//        }
+        if(downloadData()) {
+            databaseCreate();
+        }
 
         db = this.openOrCreateDatabase("Articles", MODE_PRIVATE, null);
         Cursor c = db.rawQuery("SELECT number FROM articles WHERE id <= 10", null);
